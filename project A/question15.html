@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 15</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 30px;
+            background-color: rgb(179, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 15</h1>
+    <h2>Will you be accepted?</h2>
+
+    Maths <input id="num1" type="number"><br>
+    Science <input id="num2" type="number"><br>
+    Chemistry <input id="num3" type="number"><br>
+    <button onclick="myFunc();">Submit</button>
+    <br><br>
+    <a href="question16.html"><button>Next Question</button></a>
+
+    <script>
+        function myFunc() {
+            var math = document.querySelector("#num1").value;
+            var sci = document.querySelector("#num2").value;
+            var chem = document.querySelector("#num3").value;
+            var tot = parseInt(math)+parseInt(sci)+parseInt(chem);
+            console.log(tot);
+
+            if(math <= 65){
+                alert("Your Maths mark ("+math+") is no high enough for this course");
+            }else if(sci <= 55){
+                alert("Your Science mark ("+sci+" is) no high enough for this course");
+            }else if(chem <= 50){
+                alert("Your Chemistry mark ("+chem+") is no high enough for this course");
+            }else{
+                if(tot >= 180){
+                    alert("Candidate is eligable for admission.")
+                }else if(parseInt(math)+parseInt(chem) >= 140 || parseInt(math)+parseInt(sci)>= 140){
+                    alert("Candidate is eligable for admission.")
+                }else{
+                    alert("candidate is not eligable");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

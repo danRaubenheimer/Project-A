@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 9</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+                padding: 30px;
+                background-color: rgb(179, 255, 255);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                text-align: center;
+           }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 9</h1>
+    <h2>Is it a leap year?</h2>
+
+    <input id="num1" type="number">
+    <button onclick="myFunc();">Check it!</button>
+    <br><br>
+    <a href="question10.html"><button>Next Question</button></a>
+
+    <script>
+        function myFunc() {
+            var num1 = document.querySelector("#num1").value;
+
+            if (num1 %4 === 0) {
+                alert( num1 + " is a leap year")
+                document.body.style="background-color: green;"
+            } else {
+                alert(num1 + " is not a leap year")
+                document.body.style="background-color: red;"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

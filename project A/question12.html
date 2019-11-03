@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 12</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+                padding: 30px;
+                background-color: rgb(179, 255, 255);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                text-align: center;
+           }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 12</h1>
+    <h2>How tall are you?</h2>
+
+    <input id="num1" type="number"><span>cm</span>
+    <button onclick="myFunc();">Submit</button>
+    <p id="txt"></p>
+    <br><br>
+    <a href="question13.html"><button>Next Question</button></a>
+
+    <script>
+        function myFunc() {
+            var num1 = document.querySelector("#num1").value;
+            var txt = document.querySelector("#txt");
+            if (num1 <= 135) {
+                txt.innerHTML="You are a Dwarf.";
+            } else if (num1>135 && num1<145){
+                txt.innerHTML="You are of average height.";
+            }else{
+                txt.innerHTML="You are a giant";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

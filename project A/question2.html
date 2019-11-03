@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+                padding: 30px;
+                background-color: rgb(179, 255, 255);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                text-align: center;
+           }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 2</h1>
+    <h2>Display the First 10 Natural Numbers</h2>
+    <button onclick="myFunc();">Display numbers!</button>
+    <p id="numbers"></p>
+
+    <br><br>
+    <a href="question3.html"><button>Next Question</button></a>
+
+    <script>
+        var arr = [];
+
+        function myFunc() {
+            for (var i = 1; i < 11; i++) {
+                arr.push(i);
+            }
+            document.getElementById("numbers").innerHTML = arr;
+        }
+    </script>
+</body>
+
+</html>

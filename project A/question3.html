@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 30px;
+            background-color: rgb(179, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Question 3</h1>
+    <h2>What Is The Sum and Average?</h2>
+    <input type="number" id="num" max="10">
+    <button onclick="myFunc();">Calculate</button>
+    <p id="txt1">The sum is:</p>
+    <p id="txt2">The average is:</p>
+    <br><br>
+    <a href="question4.html"><button>Next Question</button></a>
+
+    <script>
+        function add(x) {
+            var arr = ("" + x).split("").map(Number);
+            console.log(arr);
+
+            var sum = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                sum = sum + arr[i];
+            }
+            console.log(sum);
+            document.querySelector("#txt1").innerHTML="The sum is: "+sum;
+            var avg = sum/arr.length;
+            console.log(avg);
+            document.querySelector("#txt2").innerHTML="The average is: " +avg;
+
+        }
+
+        function myFunc() {
+            var num = document.querySelector("#num").value;
+            if (num.length > 11) {
+                alert("Tha maximum amount of numbers you can input is 10.");
+            } else {
+                add(num);
+            }
+        }
+    </script>
+</body>
+
+</html>

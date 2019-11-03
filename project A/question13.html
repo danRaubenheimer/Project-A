@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 30px;
+            background-color: rgb(179, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 13</h1>
+    <h2>Which is the biggest number?</h2>
+
+    no. 1<input id="num1" type="number"><br>
+    no. 2<input id="num2" type="number"><br>
+    no. 3<input id="num3" type="number"><br>
+    <button onclick="myFunc();">Submit</button>
+    <p id="txt"></p>
+    <br><br>
+    <a href="question14.html"><button>Next Question</button></a>
+
+    <script>
+        function myFunc() {
+            var num1 = document.querySelector("#num1").value;
+            var num2 = document.querySelector("#num2").value;
+            var num3 = document.querySelector("#num3").value;
+            console.log(num1 + num2 + num3);
+            var arr = [num1, num2, num3];
+            arr= arr.map(Number);
+            console.log(arr);
+            var max = Math.max(...arr);
+
+            document.getElementById("txt").innerHTML = "The max value is: " + max;
+
+        }
+    </script>
+</body>
+
+</html>

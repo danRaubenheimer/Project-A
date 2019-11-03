@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 17</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 30px;
+            background-color: rgb(179, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 17</h1>
+    <h2>Mark Sheet</h2>
+
+    Roll no. <input id="num1" type="number"><br>
+    Name: <input id="num2" type="text"><br>
+    Physics: <input id="num3" type="number"><br>
+    Chemistry: <input id="num4" type="number"><br>
+    Computer application: <input id="num5" type="number"><br>
+    <button onclick="myFunc();">Submit</button>
+    <p id="txt"></p>
+    <p id="p"></p>
+
+    <script>
+        function myFunc() {
+            var roll = document.querySelector("#num1").value;
+            var name = document.querySelector("#num2").value;
+            var phys = document.querySelector("#num3").value;
+            var chem = document.querySelector("#num4").value;
+            var ca = document.querySelector("#num5").value;
+
+            var tot = parseInt(phys) + parseInt(chem) + parseInt(ca); 
+            var percent = (tot / 300) * 100;
+
+            document.getElementById("txt").innerHTML = "Roll No. " + roll + "<br>" +
+                "Name of Student: " + name + "<br>" +
+                "Marks in Physics: " + phys + "<br>" +
+                "Marks in Chemistry: " + chem + "<br>" +
+                "Marks in Computer Application: " + ca + "<br>" +
+                "Total Marks= " + tot + "<br>" +
+                "Percentage= " + percent;
+
+            if (percent <= 25) {
+                document.getElementById("p").innerHTML = "Division= last";
+            } else if (percent > 25 && percent <= 50) {
+                document.getElementById("p").innerHTML = "Division= Third";
+            } else if (percent > 50 && percent <= 75) {
+                document.getElementById("p").innerHTML = "Division= Second";
+            } else {
+                document.getElementById("p").innerHTML = "Division= First";
+            }
+        }
+    </script>
+</body>
+
+</html>

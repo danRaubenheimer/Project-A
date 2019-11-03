@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Question 10</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+                padding: 30px;
+                background-color: rgb(179, 255, 255);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 20px;
+                text-align: center;
+           }
+    </style>
+</head>
+
+
+<body>
+
+
+    <h1>Question 11</h1>
+    <h2>1, 0 or -1?</h2>
+
+    <input id="num1" type="number">
+    <button onclick="myFunc();">Check it!</button>
+    <p id="txt"></p>
+    <br><br>
+    <a href="question12.html"><button>Next Question</button></a>
+
+    <script>
+        function myFunc() {
+            var m = document.querySelector("#num1").value;
+            var txt = document.querySelector("#txt")
+            var n;
+            if (m > 0) {
+                n=1;
+                txt.innerHTML=n;
+            } else if(m == 0){
+                n=0;
+                txt.innerHTML=n;
+            }else{
+                n=-1;
+                txt.innerHTML=n;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
